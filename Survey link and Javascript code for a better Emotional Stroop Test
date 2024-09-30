@@ -1,0 +1,213 @@
+Here is a link where you can take the survey. The a translated version of this survey was given to ukrainians in 2023-2024, so some error messages and references to locations may be in ukrainian.*/
+https://usfca.qualtrics.com/jfe/form/SV_9tqqBMc5jczYIQe
+
+
+Important Javascript code :
+
+
+/*Hiding the encoding functions*/
+jQuery("#"+this.questionId).hide();
+this.clickNextButton();
+
+/* setting a timing variable to the total duration the user spent on the survey */
+{
+	Qualtrics.SurveyEngine.setEmbeddedData('StartLoop3', "${e://Field/Q_TotalDuration}");
+	}
+
+/*Encoding for the stroop trial to last 45 seconds, and to enable the game to automaticaly move to the next question after selection*/
+
+var start = parseInt('${e://Field/StartLoop3}');
+var end = parseInt('${e://Field/Q_TotalDuration}');
+var elapsed = end - start;
+Qualtrics.SurveyEngine.setEmbeddedData('elapsed3', elapsed);
+if(elapsed > 45) Qualtrics.SurveyEngine.setEmbeddedData('timeout3', 1);
+ var that = this;
+ this.questionclick = function(event,element){
+if (element.type == 'radio') 
+{			
+that.clickNextButton();
+	}
+ }
+		if (elapsed >45) {
+jQuery("#"+this.questionId).hide();
+this.clickNextButton();
+	}
+	
+/* keep track of the score based off if the random color that was displayed matches what was selected */
+ let userScore3 = 0;
+
+let colorCode1 = "${q://QID993/ChoiceGroup/DisplayedChoices}";
+let colorCode2 = "${q://QID1028/ChoiceGroup/DisplayedChoices}";
+let colorCode3 = "${q://QID994/ChoiceGroup/DisplayedChoices}";
+let colorCode4 = "${q://QID1029/ChoiceGroup/DisplayedChoices}";
+let colorCode5 = "${q://QID995/ChoiceGroup/DisplayedChoices}";
+let colorCode6 = "${q://QID1030/ChoiceGroup/DisplayedChoices}";
+let colorCode7 = "${q://QID996/ChoiceGroup/DisplayedChoices}";
+let colorCode8 = "${q://QID1031/ChoiceGroup/DisplayedChoices}";
+let colorCode9 = "${q://QID997/ChoiceGroup/DisplayedChoices}";
+let colorCode10 = "${q://QID1032/ChoiceGroup/DisplayedChoices}";
+let colorCode11 = "${q://QID998/ChoiceGroup/DisplayedChoices}";
+let colorCode12 = "${q://QID1033/ChoiceGroup/DisplayedChoices}";
+let colorCode13 = "${q://QID999/ChoiceGroup/DisplayedChoices}";
+let colorCode14 = "${q://QID1034/ChoiceGroup/DisplayedChoices}";
+let colorCode15 = "${q://QID1000/ChoiceGroup/DisplayedChoices}";
+let colorCode16 = "${q://QID1035/ChoiceGroup/DisplayedChoices}";
+let colorCode17 = "${q://QID1001/ChoiceGroup/DisplayedChoices}";
+let colorCode18 = "${q://QID1036/ChoiceGroup/DisplayedChoices}";
+let colorCode19 = "${q://QID1002/ChoiceGroup/DisplayedChoices}";
+let colorCode20 = "${q://QID1037/ChoiceGroup/DisplayedChoices}";
+let colorCode21 = "${q://QID1003/ChoiceGroup/DisplayedChoices}";
+let colorCode22 = "${q://QID1038/ChoiceGroup/DisplayedChoices}";
+let colorCode23 = "${q://QID1004/ChoiceGroup/DisplayedChoices}";
+let colorCode24 = "${q://QID1039/ChoiceGroup/DisplayedChoices}";
+let colorCode25 = "${q://QID1005/ChoiceGroup/DisplayedChoices}";
+let colorCode26 = "${q://QID1040/ChoiceGroup/DisplayedChoices}";
+let colorCode27 = "${q://QID1006/ChoiceGroup/DisplayedChoices}";
+let colorCode28 = "${q://QID1041/ChoiceGroup/DisplayedChoices}";
+let colorCode29 = "${q://QID1007/ChoiceGroup/DisplayedChoices}";
+let colorCode30 = "${q://QID1042/ChoiceGroup/DisplayedChoices}";
+let colorCode31 = "${q://QID1008/ChoiceGroup/DisplayedChoices}";
+let colorCode32 = "${q://QID1043/ChoiceGroup/DisplayedChoices}";
+let colorCode33 = "${q://QID1009/ChoiceGroup/DisplayedChoices}";
+let colorCode34 = "${q://QID1044/ChoiceGroup/DisplayedChoices}";
+let colorCode35 = "${q://QID1010/ChoiceGroup/DisplayedChoices}";
+let colorCode36 = "${q://QID1045/ChoiceGroup/DisplayedChoices}";
+let colorCode37 = "${q://QID1011/ChoiceGroup/DisplayedChoices}";
+let colorCode38 = "${q://QID1046/ChoiceGroup/DisplayedChoices}";
+let colorCode39 = "${q://QID1012/ChoiceGroup/DisplayedChoices}";
+let colorCode40 = "${q://QID1047/ChoiceGroup/DisplayedChoices}";
+let colorCode41 = "${q://QID1013/ChoiceGroup/DisplayedChoices}";
+let colorCode42 = "${q://QID1048/ChoiceGroup/DisplayedChoices}";
+let colorCode43 = "${q://QID1014/ChoiceGroup/DisplayedChoices}";
+let colorCode44 = "${q://QID1049/ChoiceGroup/DisplayedChoices}";
+let colorCode45 = "${q://QID1015/ChoiceGroup/DisplayedChoices}";
+let colorCode46 = "${q://QID1050/ChoiceGroup/DisplayedChoices}";
+let colorCode47 = "${q://QID1016/ChoiceGroup/DisplayedChoices}";
+let colorCode48 = "${q://QID1051/ChoiceGroup/DisplayedChoices}";
+let colorCode49 = "${q://QID1017/ChoiceGroup/DisplayedChoices}";
+let colorCode50 = "${q://QID1052/ChoiceGroup/DisplayedChoices}";
+let colorCode51 = "${q://QID1018/ChoiceGroup/DisplayedChoices}";
+let colorCode52 = "${q://QID1053/ChoiceGroup/DisplayedChoices}";
+let colorCode53 = "${q://QID1019/ChoiceGroup/DisplayedChoices}";
+let colorCode54 = "${q://QID1054/ChoiceGroup/DisplayedChoices}";
+let colorCode55 = "${q://QID1020/ChoiceGroup/DisplayedChoices}";
+let colorCode56 = "${q://QID1055/ChoiceGroup/DisplayedChoices}";
+let colorCode57 = "${q://QID1021/ChoiceGroup/DisplayedChoices}";
+let colorCode58 = "${q://QID1056/ChoiceGroup/DisplayedChoices}";
+let colorCode59 = "${q://QID1022/ChoiceGroup/DisplayedChoices}";
+let colorCode60 = "${q://QID1057/ChoiceGroup/DisplayedChoices}";
+let colorCode61 = "${q://QID1023/ChoiceGroup/DisplayedChoices}";
+let colorCode62 = "${q://QID1058/ChoiceGroup/DisplayedChoices}";
+let colorCode63 = "${q://QID1024/ChoiceGroup/DisplayedChoices}";
+let colorCode64 = "${q://QID1059/ChoiceGroup/DisplayedChoices}";
+let colorCode65 = "${q://QID1025/ChoiceGroup/DisplayedChoices}";
+let colorCode66 = "${q://QID1060/ChoiceGroup/DisplayedChoices}";
+let colorCode67 = "${q://QID1026/ChoiceGroup/DisplayedChoices}";
+let colorCode68 = "${q://QID1061/ChoiceGroup/DisplayedChoices}";
+let colorCode69 = "${q://QID1027/ChoiceGroup/DisplayedChoices}";
+let colorCode70 = "${q://QID1062/ChoiceGroup/DisplayedChoices}";
+let colors = [
+  colorCode1, colorCode2, colorCode3, colorCode4, colorCode5, colorCode6, colorCode7, colorCode8, colorCode9, colorCode10, 
+  colorCode11, colorCode12, colorCode13, colorCode14, colorCode15, colorCode16, colorCode17, colorCode18, colorCode19, colorCode20,
+  colorCode21, colorCode22, colorCode23, colorCode24, colorCode25, colorCode26, colorCode27, colorCode28, colorCode29, colorCode30,
+  colorCode31, colorCode32, colorCode33, colorCode34, colorCode35, colorCode36, colorCode37, colorCode38, colorCode39, colorCode40,
+  colorCode41, colorCode42, colorCode43, colorCode44, colorCode45, colorCode46, colorCode47, colorCode48, colorCode49, colorCode50,
+  colorCode51, colorCode52, colorCode53, colorCode54, colorCode55, colorCode56, colorCode57, colorCode58, colorCode59, colorCode60,
+  colorCode61, colorCode62, colorCode63, colorCode64, colorCode65, colorCode66, colorCode67, colorCode68, colorCode69, colorCode70
+];
+	
+let choice1 = "${q://70_QID1098/ChoiceGroup/SelectedChoices}";
+let choice2 = "${q://71_QID1098/ChoiceGroup/SelectedChoices}";
+let choice3 = "${q://72_QID1098/ChoiceGroup/SelectedChoices}";
+let choice4 = "${q://73_QID1098/ChoiceGroup/SelectedChoices}";
+let choice5 = "${q://74_QID1098/ChoiceGroup/SelectedChoices}";
+let choice6 = "${q://75_QID1098/ChoiceGroup/SelectedChoices}";
+let choice7 = "${q://76_QID1098/ChoiceGroup/SelectedChoices}";
+let choice8 = "${q://77_QID1098/ChoiceGroup/SelectedChoices}";
+let choice9 = "${q://78_QID1098/ChoiceGroup/SelectedChoices}";
+let choice10 = "${q://79_QID1098/ChoiceGroup/SelectedChoices}";
+let choice11 = "${q://80_QID1098/ChoiceGroup/SelectedChoices}";
+let choice12 = "${q://81_QID1098/ChoiceGroup/SelectedChoices}";
+let choice13 = "${q://82_QID1098/ChoiceGroup/SelectedChoices}";
+let choice14 = "${q://83_QID1098/ChoiceGroup/SelectedChoices}";
+let choice15 = "${q://84_QID1098/ChoiceGroup/SelectedChoices}";
+let choice16 = "${q://85_QID1098/ChoiceGroup/SelectedChoices}";
+let choice17 = "${q://86_QID1098/ChoiceGroup/SelectedChoices}";
+let choice18 = "${q://87_QID1098/ChoiceGroup/SelectedChoices}";
+let choice19 = "${q://88_QID1098/ChoiceGroup/SelectedChoices}";
+let choice20 = "${q://89_QID1098/ChoiceGroup/SelectedChoices}";
+let choice21 = "${q://90_QID1098/ChoiceGroup/SelectedChoices}";
+let choice22 = "${q://91_QID1098/ChoiceGroup/SelectedChoices}";
+let choice23 = "${q://92_QID1098/ChoiceGroup/SelectedChoices}";
+let choice24 = "${q://93_QID1098/ChoiceGroup/SelectedChoices}";
+let choice25 = "${q://94_QID1098/ChoiceGroup/SelectedChoices}";
+let choice26 = "${q://95_QID1098/ChoiceGroup/SelectedChoices}";
+let choice27 = "${q://96_QID1098/ChoiceGroup/SelectedChoices}";
+let choice28 = "${q://97_QID1098/ChoiceGroup/SelectedChoices}";
+let choice29 = "${q://98_QID1098/ChoiceGroup/SelectedChoices}";
+let choice30 = "${q://99_QID1098/ChoiceGroup/SelectedChoices}";
+let choice31 = "${q://100_QID1098/ChoiceGroup/SelectedChoices}";
+let choice32 = "${q://101_QID1098/ChoiceGroup/SelectedChoices}";
+let choice33 = "${q://102_QID1098/ChoiceGroup/SelectedChoices}";
+let choice34 = "${q://103_QID1098/ChoiceGroup/SelectedChoices}";
+let choice35 = "${q://104_QID1098/ChoiceGroup/SelectedChoices}";
+let choice36 = "${q://105_QID1098/ChoiceGroup/SelectedChoices}";
+let choice37 = "${q://106_QID1098/ChoiceGroup/SelectedChoices}";
+let choice38 = "${q://107_QID1098/ChoiceGroup/SelectedChoices}";
+let choice39 = "${q://108_QID1098/ChoiceGroup/SelectedChoices}";
+let choice40 = "${q://109_QID1098/ChoiceGroup/SelectedChoices}";
+let choice41 = "${q://110_QID1098/ChoiceGroup/SelectedChoices}";
+let choice42 = "${q://111_QID1098/ChoiceGroup/SelectedChoices}";
+let choice43 = "${q://112_QID1098/ChoiceGroup/SelectedChoices}";
+let choice44 = "${q://113_QID1098/ChoiceGroup/SelectedChoices}";
+let choice45 = "${q://114_QID1098/ChoiceGroup/SelectedChoices}";
+let choice46 = "${q://115_QID1098/ChoiceGroup/SelectedChoices}";
+let choice47 = "${q://116_QID1098/ChoiceGroup/SelectedChoices}";
+let choice48 = "${q://117_QID1098/ChoiceGroup/SelectedChoices}";
+let choice49 = "${q://118_QID1098/ChoiceGroup/SelectedChoices}";
+let choice50 = "${q://119_QID1098/ChoiceGroup/SelectedChoices}";
+let choice51 = "${q://120_QID1098/ChoiceGroup/SelectedChoices}";
+let choice52 = "${q://121_QID1098/ChoiceGroup/SelectedChoices}";
+let choice53 = "${q://122_QID1098/ChoiceGroup/SelectedChoices}";
+let choice54 = "${q://123_QID1098/ChoiceGroup/SelectedChoices}";
+let choice55 = "${q://124_QID1098/ChoiceGroup/SelectedChoices}";
+let choice56 = "${q://125_QID1098/ChoiceGroup/SelectedChoices}";
+let choice57 = "${q://126_QID1098/ChoiceGroup/SelectedChoices}";
+let choice58 = "${q://127_QID1098/ChoiceGroup/SelectedChoices}";
+let choice59 = "${q://128_QID1098/ChoiceGroup/SelectedChoices}";
+let choice60 = "${q://129_QID1098/ChoiceGroup/SelectedChoices}";
+let choice61 = "${q://130_QID1098/ChoiceGroup/SelectedChoices}";
+let choice62 = "${q://131_QID1098/ChoiceGroup/SelectedChoices}";
+let choice63 = "${q://132_QID1098/ChoiceGroup/SelectedChoices}";
+let choice64 = "${q://133_QID1098/ChoiceGroup/SelectedChoices}";
+let choice65 = "${q://134_QID1098/ChoiceGroup/SelectedChoices}";
+let choice66 = "${q://135_QID1098/ChoiceGroup/SelectedChoices}";
+let choice67 = "${q://136_QID1098/ChoiceGroup/SelectedChoices}";
+let choice68 = "${q://137_QID1098/ChoiceGroup/SelectedChoices}";
+let choice69 = "${q://138_QID1098/ChoiceGroup/SelectedChoices}";
+let choice70 = "${q://139_QID1098/ChoiceGroup/SelectedChoices}";
+let choices = [choice1, choice2, choice3, choice4, choice5, choice6, choice7, choice8, choice9, choice10, 
+			   choice11, choice12, choice13, choice14, choice15, choice16, choice17, choice18, choice19, choice20, 
+			   choice21, choice22, choice23, choice24, choice25, choice26, choice27, choice28, choice29, choice30,
+			   choice31, choice32, choice33, choice34, choice35, choice36, choice37, choice38, choice39, choice40, 
+			   choice41, choice42, choice43, choice44, choice45, choice46, choice47, choice48, choice49, choice50, 
+			   choice51, choice52, choice53, choice54, choice55, choice56, choice57, choice58, choice59, choice60, 
+			   choice61, choice62, choice63, choice64, choice65, choice66, choice67, choice68, choice69, choice70];
+	
+ 
+
+for (let i = 0; i < choices.length; i++) {  
+let choice = choices[i];
+let color = colors[i];
+	
+if (color === "#FF0000" && choice === "червоний"  || color === "#FFFF00" && choice === "жовтий" || color === "#00FF00" && choice === "салатовий" || color === "#0000FF" && choice === "синій"
+   
+ || color === "#FF0000" && choice === "Red"  || color === "#FFFF00" && choice === "Yellow" || color === "#00FF00" && choice === "Green" || color === "#0000FF" && choice === "Blue" )
+	
+{
+	userScore3++;
+}	
+	
+ }
+
+  Qualtrics.SurveyEngine.setEmbeddedData('Score3', userScore3);
